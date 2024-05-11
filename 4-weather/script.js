@@ -31,9 +31,16 @@ const getWeatherData = async (cityValue)=>{
     
   }
 }
+const updateTime = ()=>{
+  let timeString =new Date().toLocaleString()
+  document.getElementById('timeString').innerHTML=timeString
+  setInterval(updateTime,1000)
+}
+
 formEl.addEventListener('submit',(event)=>{
   // 防止跳转preventDefault()
   event.preventDefault()
   const cityValue = cityInputEl.value
+  updateTime()
   getWeatherData(cityValue)
 })
