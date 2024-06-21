@@ -7,6 +7,7 @@ const Pagination =({paginate,postsPerPage,currentPage,totalPosts})=>{
     <ul className="pagination">
       {
         pageNumbers.map((number)=>(
+          // {}需要写return ()不需要写return
           <li key={number} className="page-item">
           <a
           onClick={()=>paginate(number)} 
