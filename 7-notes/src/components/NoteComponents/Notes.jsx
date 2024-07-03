@@ -38,11 +38,9 @@ function Notes() {
   //apply the save and get functions using useEffect
   //get the saved notes and add them to the array
   useEffect(() => {
-    //if can't find then return null from localStorage
-    const data = JSON.parse(localStorage.getItem("Notes"));
-    if (Array.isArray(data) && data.length > 0) {
-      console.log("test1");
-      setNotes(data);
+    const data = JSON.parse(localStorage.getItem("Notes"))
+    if(Array.isArray(data) && data.length>0){
+      setNotes(data)
     }
     setLoading(false); // Set loading to false after retrieving notes
   }, []);
