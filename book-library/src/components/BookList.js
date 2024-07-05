@@ -8,9 +8,8 @@ function BookList(){
   useEffect(()=>{
     dispatch(fetchBooks())
   },[dispatch])
-  console.log('books',books);
   if(!books.length) return <div>Loading...</div>
-  
+
   return(
     <div>
       <h2>Books</h2>
